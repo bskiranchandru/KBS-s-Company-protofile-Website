@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <head>
+        <title> verification page page</title>
+        <title>Upload the new File</title>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel = 'stylesheet' type = 'text/css' href = '../static/style1.css'>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+        <meta name="generator" content="Hugo 0.101.0">
+       
+    
+        <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/sign-in/">
+    
+        
+    
+        
+    
+    <link href="./Signin_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    
+        <!-- Favicons -->
+    <link rel="apple-touch-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+    <link rel="manifest" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/manifest.json">
+    <link rel="mask-icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
+    <link rel="icon" href="https://getbootstrap.com/docs/5.2/assets/img/favicons/favicon.ico">
+    <meta name="theme-color" content="#712cf9">
+    </head>
+    <body class="text-center" data-new-gr-c-s-check-loaded="14.1073.0" data-gr-ext-installed="">
+        <h3>
+            <a href="/cancer.html"> HOME </a>
+        </h3>
+        <h1>
+            This is the main page 
+        </h1>
+
+        <!--h2> Upload the new file</h2>
+        <form method = post enctype = "multipart/form-data">
+            <input type = file name = image>
+            <input type = submit value = predict -->
+        </form>
+        <!--main class="form-signin w-100 m-auto"-->
+            <form method = post enctype = multipart/form-data>
+              
+              <h1 class="h3 mb-3 fw-normal">Please Upload Image</h1>
+          
+              
+                <input type="file" id="image" name ="image"  class="form-control"  required autofocus>
+               
+              
+              <button class="w-100 btn btn-lg btn-primary" type="submit">Predict</button>
+              <br>
+              {% if image_loc %}
+              <img class="mb-4" src="static/{{image_loc}}" alt="" width="256" height="'300">
+              <h3 class="h3 mb-3 fw-normal">Predictions:{{predictions}}</h3>
+              {% endif %}
+            
+            </form>
+            <style>
+                *{
+                    margin :0;
+                    padding:0;
+                }
+                .background-image{
+                    background-image:url('./cell1.jpg');
+                    background-size:cover;
+                    background-repeat:no-repeat;
+                    height: 100vh;
+                }
+            </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    </body>
+</html>
